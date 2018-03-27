@@ -26,6 +26,10 @@ func (m *Model) ParseModel(modelName string, currentPackage string, knownModelNa
 	knownModelNames[modelName] = true
 	//log.Printf("Before parse model |%s|, package: |%s|\n", modelName, currentPackage)
 
+	if modelName == "" {
+		return nil, nil
+	}
+
 	astTypeSpec, modelPackage := m.parser.FindModelDefinition(modelName, currentPackage)
 
 	modelNameParts := strings.Split(modelName, ".")

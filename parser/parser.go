@@ -163,6 +163,29 @@ func (parser *Parser) CheckRealPackagePath(packagePath string) string {
 	if strings.HasPrefix(packagePath, "golang_org/x/") {
 		packagePath = filepath.Join("vendor", packagePath)
 	}
+	// 没找到哪里传进来路径错误，强制转换成了正确的包路径
+	if strings.HasPrefix(packagePath, "k8s/io/") {
+		packagePathByte := []byte(packagePath)
+		packagePathByte[3] = '.'
+		packagePath = string(packagePathByte)
+	}
+	if strings.HasPrefix(packagePath, "github/com/") {
+		packagePathByte := []byte(packagePath)
+		packagePathByte[6] = '.'
+		packagePath = string(packagePathByte)
+	}
+	if strings.HasPrefix(packagePath, "gitlab/dnt/com/cn/") {
+		packagePathByte := []byte(packagePath)
+		packagePathByte[6] = '.'
+		packagePathByte[10] = '.'
+		packagePathByte[14] = '.'
+		packagePath = string(packagePathByte)
+	}
+	if strings.HasPrefix(packagePath, "gopkg/in/") {
+		packagePathByte := []byte(packagePath)
+		packagePathByte[5] = '.'
+		packagePath = string(packagePathByte)
+	}
 
 	// Only check under vendor if it is not explicity disabled AND the package
 	// in question is not an API package
