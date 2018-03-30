@@ -9,8 +9,9 @@
 package main
 
 import (
-	"github.com/yvasiyarov/swagger/example"
 	"net/http"
+
+	"github.com/recall704/swagger/example"
 )
 
 func main() {

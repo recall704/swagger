@@ -4,8 +4,8 @@ import (
 	"flag"
 	"strings"
 
+	"github.com/recall704/swagger/generator"
 	log "github.com/sirupsen/logrus"
-	"github.com/yvasiyarov/swagger/generator"
 )
 
 var apiPackage = flag.String("apiPackage", "", "The package that implements the API controllers, relative to $GOPATH/src")

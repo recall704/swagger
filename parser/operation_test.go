@@ -4,9 +4,9 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/recall704/swagger/parser"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
-	"github.com/yvasiyarov/swagger/parser"
 )
 
 type OperationSuite struct {

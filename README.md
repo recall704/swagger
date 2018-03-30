@@ -19,9 +19,9 @@ _This tool currently generates Swagger 1.x spec files -- there are plans to upda
 
 ### Quick Start Guide
 
-1. Add comments to your API source code, [see Declarative Comments Format ](https://github.com/yvasiyarov/swagger/wiki/Declarative-Comments-Format)
+1. Add comments to your API source code, [see Declarative Comments Format ](https://github.com/recall704/swagger/wiki/Declarative-Comments-Format)
 
-2. Download Swagger for Go by using ```go get github.com/yvasiyarov/swagger```
+2. Download Swagger for Go by using ```go get github.com/recall704/swagger```
 
 3. Or, compile the Swagger generator from sources.
     `go install`
@@ -35,8 +35,8 @@ _This tool currently generates Swagger 1.x spec files -- there are plans to upda
     
     ```
     $ pwd
-    /Users/dselans/Code/go/src/github.com/yvasiyarov/swagger
-    $ ./$GOPATH/bin/swagger -apiPackage="github.com/yvasiyarov/swagger/example" -mainApiFile=example/web/main.go -output=./API.md -format=markdown
+    /Users/dselans/Code/go/src/github.com/recall704/swagger
+    $ ./$GOPATH/bin/swagger -apiPackage="github.com/recall704/swagger/example" -mainApiFile=example/web/main.go -output=./API.md -format=markdown
     ```
     
 ### Command Line Flags
@@ -44,8 +44,8 @@ _This tool currently generates Swagger 1.x spec files -- there are plans to upda
 |------------------|---------------------------|    
 | **-apiPackage**  | Package with API controllers implementation |
 | **-mainApiFile** | Main API file. This file is used for generating the "General API Info" bits. If `-mainApiFile` is not specified, then `$apiPackage/main.go` is assumed. | 
-| **-format**      | One of: `go|swagger|asciidoc|markdown|confluence`. Default is `-format="go"`. See See [docs](https://github.com/yvasiyarov/swagger/wiki/Generate-Different-Formats). |
-| **-output**     | Output specification. Default varies according to -format. See [docs](https://github.com/yvasiyarov/swagger/wiki/Generate-Different-Formats). |
+| **-format**      | One of: `go|swagger|asciidoc|markdown|confluence`. Default is `-format="go"`. See See [docs](https://github.com/recall704/swagger/wiki/Generate-Different-Formats). |
+| **-output**     | Output specification. Default varies according to -format. See [docs](https://github.com/recall704/swagger/wiki/Generate-Different-Formats). |
 | **controllerClass**  | Speed up parsing by specifying which receiver objects have the controller methods. The default is to search all methods. The argument can be a regular expression. For example, `-controllerClass="(Context|Controller)$"` means the receiver name must end in Context or Controller. |
 | **contentsTable**     | Whether to generate Table of Contents; default: `true`. |
 | **models**       | Generate 'Models' section; default `true`. |
@@ -59,12 +59,12 @@ To run the generated swagger UI (assuming you used -format="go"), copy/move the 
 
 ### Additional Documentation
 
-**Project Status** : [Alpha](https://github.com/yvasiyarov/swagger/wiki/Declarative-Comments-Format)
+**Project Status** : [Alpha](https://github.com/recall704/swagger/wiki/Declarative-Comments-Format)
 
-**Declarative Comments Format** : [Read more ](https://github.com/yvasiyarov/swagger/wiki/Declarative-Comments-Format)
+**Declarative Comments Format** : [Read more ](https://github.com/recall704/swagger/wiki/Declarative-Comments-Format)
 
-**Technical Notes** : [Read More](https://github.com/yvasiyarov/swagger/wiki/Technical-Notes)
+**Technical Notes** : [Read More](https://github.com/recall704/swagger/wiki/Technical-Notes)
 
-**Known Limitations** : [Read More](https://github.com/yvasiyarov/swagger/wiki/Known-Limitations)
+**Known Limitations** : [Read More](https://github.com/recall704/swagger/wiki/Known-Limitations)
     
- **Generating Different Format Docs**: [Read More](https://github.com/yvasiyarov/swagger/wiki/Generate-Different-Formats)
+ **Generating Different Format Docs**: [Read More](https://github.com/recall704/swagger/wiki/Generate-Different-Formats)

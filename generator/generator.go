@@ -9,9 +9,9 @@ import (
 	"runtime"
 	"strings"
 
+	"github.com/recall704/swagger/markup"
+	"github.com/recall704/swagger/parser"
 	"github.com/sirupsen/logrus"
-	"github.com/yvasiyarov/swagger/markup"
-	"github.com/yvasiyarov/swagger/parser"
 )
 
 const (

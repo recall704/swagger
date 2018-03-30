@@ -9,9 +9,9 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/recall704/swagger/parser"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
-	"github.com/yvasiyarov/swagger/parser"
 )
 
 type ParserSuite struct {
@@ -32,7 +32,7 @@ func IsController(funcDeclaration *ast.FuncDecl, controllerClass string) bool {
 
 var initialisedParser2 *parser.Parser
 var exampleBasePath = "http://127.0.0.1:3000/"
-var apiPackages = "github.com/yvasiyarov/swagger/example"
+var apiPackages = "github.com/recall704/swagger/example"
 
 func (suite *ParserSuite) SetupSuite() {
 	if initialisedParser2 == nil {
@@ -49,7 +49,7 @@ func (suite *ParserSuite) SetupSuite() {
 			suite.T().Fatalf("Please, set $GOPATH environment variable\n")
 		}
 
-		initialisedParser2.ParseGeneralApiInfo(path.Join(gopath, "src", "github.com/yvasiyarov/swagger/example/web/main.go"))
+		initialisedParser2.ParseGeneralApiInfo(path.Join(gopath, "src", "github.com/recall704/swagger/example/web/main.go"))
 		initialisedParser2.ParseApi()
 	}
 	suite.parser = initialisedParser2

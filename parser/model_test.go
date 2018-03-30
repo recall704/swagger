@@ -5,9 +5,9 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/recall704/swagger/parser"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
-	"github.com/yvasiyarov/swagger/parser"
 )
 
 type ModelSuite struct {
@@ -18,7 +18,7 @@ type ModelSuite struct {
 
 var initialisedParser *parser.Parser
 
-const ExamplePackageName = "github.com/yvasiyarov/swagger/example"
+const ExamplePackageName = "github.com/recall704/swagger/example"
 
 func (suite *ModelSuite) SetupSuite() {
 	if initialisedParser == nil {

@@ -13,7 +13,7 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/yvasiyarov/swagger/utils"
+	"github.com/recall704/swagger/utils"
 )
 
 var (
